@@ -20,7 +20,6 @@ void setup() {
 
 void loop() {
   Usb.Task();
-  //int chance = random(280);
   int chance = random(170);
 
 switch (chance) {
@@ -62,10 +61,10 @@ bool m_right(){
 void onButtonDown(uint16_t buttonId) {
   Mouse.press(buttonId);
   switch (buttonId) {
-    case MOUSE_BUTTON5:
+    case MOUSE_XB2:
       m_left();
       break;
-    case MOUSE_BUTTON4:
+    case MOUSE_XB1:
       m_right();
       break;
   }
@@ -74,10 +73,10 @@ void onButtonDown(uint16_t buttonId) {
 void onButtonUp(uint16_t buttonId) {
   Mouse.release(buttonId);
   switch (buttonId) {
-    case MOUSE_BUTTON5:
+    case MOUSE_XB2:
       on_left = false;
       break;
-    case MOUSE_BUTTON4:
+    case MOUSE_XB1:
       on_right = false;
       break;
   }
